@@ -2,6 +2,7 @@ import React from 'react'
 
 function Navbar() {
     return (
+        //TODO: SOJOOD : replace a to link and href to to 
         <nav className="navbar navbar-expand-lg bg-custom navbar-dark bg-dark">
             <div className="container">
                 <a className="navbar-brand" href="index.html"><img src="img/logo300.png" width={54} alt /> </a>
