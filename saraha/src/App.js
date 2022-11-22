@@ -7,6 +7,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Register />
+      {/* <Home /> */}
       {/* TODO: Route with screens  */}
     </div>
   );
