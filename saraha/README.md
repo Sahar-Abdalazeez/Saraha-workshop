@@ -34,8 +34,8 @@ in this part of the project we build three screens .
 1-The Register screen
 ![Screenshot](register.png)
 
-1-The Register screen
-![Screenshot](register.png)
-
 2-The Login screen
 ![Screenshot](login.png)
+
+1-The NotFound screen
+![Screenshot](notFound.png)
