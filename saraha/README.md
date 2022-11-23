@@ -14,20 +14,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+# npm i axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requests can be made by passing the relevant config to axios.
 
-### `npm run build`
+# npm i react-router-dom
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+we used it for React Router in web applications
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# npm i lottie-react
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+we add this pages in order to add animation
+example in the notfound screen
 
 in this part of the project we build three screens .
 
