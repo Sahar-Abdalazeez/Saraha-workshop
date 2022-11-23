@@ -34,11 +34,11 @@ function Register() {
             </div>
             <div className="card p-5 w-50 m-auto">
                 <form onSubmit={preventForm}>
-                    <input className="form-control" onChange={getFormdata} placeholder="Enter your Name" type="text" name="userName" required/>
-                    <input className="form-control my-2 " onChange={getFormdata} placeholder="Enter your email" type="email" name="email" required/>
-                    <input className="form-control  " onChange={getFormdata} placeholder="Enter your Password" type="password" name="password" required/>
-                    <input className="form-control  my-2" onChange={getFormdata} placeholder="Password Confirmation" type="password" name="cpassword" required/>
-                    <button type="submit" className="btn btn-default-outline my-4 w-100 rounded">Register</button>
+                    <input  className="form-control" onChange={getFormdata} placeholder="Enter your Name" type="text" name="userName" required/>
+                    <input  className="form-control my-2 " onChange={getFormdata} placeholder="Enter your email" type="email" name="email" required/>
+                    <input  className="form-control  " onChange={getFormdata} placeholder="Enter your Password" type="password" name="password" required/>
+                    <input  className="form-control  my-2" onChange={getFormdata} placeholder="Password Confirmation" type="password" name="cpassword" required/>
+                    <button  type="submit" className="btn btn-default-outline my-4 w-100 rounded">Register</button>
                 </form>
             </div>
         </div>

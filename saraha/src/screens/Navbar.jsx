@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo300.png'; // Tell webpack this JS file uses this image
 
 function Navbar() {
     return (
-        //TODO: SOJOOD : replace a to link and href to to 
+        
         <nav className="navbar navbar-expand-lg bg-custom navbar-dark bg-dark">
             <div className="container">
                 <a className="navbar-brand" href="index.html"><img src={logo} width={54} alt="logo" /> </a>
@@ -13,10 +14,10 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="register.html">Register</a>
+                            <Link className="nav-link" to="register">Register</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="login.html">Login</a>
+                            <Link className="nav-link" to="login">Login</Link>
                         </li>
                     </ul>
                 </div>
