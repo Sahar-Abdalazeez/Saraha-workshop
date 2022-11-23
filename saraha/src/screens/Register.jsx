@@ -17,7 +17,7 @@ function Register() {
         let { data } = await axios.post("http://localhost:3003/api/v1/auth/signup", user);
         if (data.message === 'done') {
             console.log('data', data);
-            navigate('/home');
+            navigate('/user');
         }
     }
 

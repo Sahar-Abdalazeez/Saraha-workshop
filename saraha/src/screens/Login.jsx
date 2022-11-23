@@ -23,7 +23,8 @@ function Login() {
         }
         else {
             //route to home 
-            navigate('/home');
+            navigate('/user');
+            localStorage.setItem('token',data.token);
         }
 
     };
@@ -49,7 +50,7 @@ function Login() {
                             setUser((prevUserValue) => ({ ...prevUserValue, password: password.target.value }))
                         }} />
                     <div className='text-danger'>{error.password}</div>
-                    <button className="btn btn-default-outline my-4 w-100 rounded" onClick={(e) => {
+                    <button type="submit" className="btn btn-default-outline my-4 w-100 rounded" onClick={(e) => {
                         handleLogin(e);
                     }} >Login</button>
                     <p><a className="text-muted forgot btn" href>I Forgot My Password</a></p>
