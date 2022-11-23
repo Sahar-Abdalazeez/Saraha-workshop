@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-
 import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom';
+
 function Login() {
     //states 
     const [user, setUser] = useState({ email: '', password: '' });
     const [error, setError] = useState({ password: '', email: '' });
+    const navigate = useNavigate();
 
     //login function 
     const handleLogin = async (e) => {
@@ -15,14 +17,15 @@ function Login() {
             setError({ password: 'incorrect email or password ', email: 'incorrect email or password ' })
         }
         else if (data.message === 'password incorrect') {
-            setError({ password: 'password incorrect' })
+            setError({ password: data.message })
         }
         else {
-            console.log('hello')
             //route to home 
+            navigate('/');
         }
 
     };
+
     return (
         <div className="container text-center my-5">
             <div className="user my-3">
@@ -48,8 +51,7 @@ function Login() {
                         handleLogin(e);
                     }} >Login</button>
                     <p><a className="text-muted forgot btn" href>I Forgot My Password</a></p>
-                    {/* route to register  */}
-                    <a className="btn btn-default-outline" href="register.html">Register</a>
+                    <Link className="btn btn-default-outline" to="../register">Register</Link>
                 </form>
             </div>
         </div>
