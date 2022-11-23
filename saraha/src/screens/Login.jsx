@@ -12,8 +12,13 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         let { data } = await axios.post('http://localhost:3003/api/v1/auth/signin', user);
-        //console.log(data);
-        if (data.message === 'validation error') {
+
+        if (data.message === 'login') {
+            //route to home 
+            localStorage.setItem('token', data.loginToken);
+            navigate('/user');
+        }
+        else if (data.message === 'validation error') {
             setError({ password: 'incorrect email or password ', email: 'incorrect email or password ' })
         }
         else if (data.message === 'password incorrect') {
@@ -22,10 +27,8 @@ function Login() {
         else if (data.message === 'email not exist') {
             setError({ email: data.message })
         }
-        else if (data.message === 'login') {
-            //route to home 
-            localStorage.setItem('token', data.loginToken);
-            navigate('/user');
+        else {
+            setError({ password: 'incorrect email or password ', email: 'incorrect email or password ' })
         }
     };
 
