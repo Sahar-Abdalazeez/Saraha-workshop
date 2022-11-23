@@ -21,7 +21,7 @@ function Login() {
         }
         else {
             //route to home 
-            navigate('/');
+            navigate('/home');
         }
 
     };
