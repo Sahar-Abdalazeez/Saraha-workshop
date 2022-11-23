@@ -22,12 +22,10 @@ function Login() {
         else if (data.message === 'email not exist') {
             setError({ email: data.message })
         }
-        else if(data.message == 'login'){
+        else if (data.message === 'login') {
             //route to home 
-            localStorage.setItem('token',data.loginToken);
+            localStorage.setItem('token', data.loginToken);
             navigate('/user');
-            
-            
         }
     };
 
