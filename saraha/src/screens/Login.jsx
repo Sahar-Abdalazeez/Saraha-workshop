@@ -42,7 +42,7 @@ function Login() {
                             setUser((prevUserValue) => ({ ...prevUserValue, email: email.target.value }))
                         }} />
                     <div className='text-danger'>{error.email}</div>
-                    <input className="form-control mt-4 " placeholder="Enter your Password" type="text" name="password"
+                    <input className="form-control mt-4 " placeholder="Enter your Password" type="password" name="password"
                         onChange={(password) => {
                             setError({ password: '', email: '' })
 
