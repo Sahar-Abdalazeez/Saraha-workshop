@@ -5,7 +5,9 @@ body {
 .bg-custom {
   background-color: #10bbb3 !important;
 }
-
+.main{
+  background-color: red;
+}
 .nav-link {
   color: #fff !important;
 }

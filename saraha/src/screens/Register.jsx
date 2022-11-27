@@ -14,7 +14,7 @@ function Register() {
 
     let preventForm = async (e) => {
         e.preventDefault();
-        let { data } = await axios.post("http://localhost:3003/api/v1/auth/signup", user);
+        let { data } = await axios.post("http://localhost:3000/api/v1/auth/signup", user);
         if (data.message === 'done') {
             console.log('data', data);
             navigate('/user');
