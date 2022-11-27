@@ -11,7 +11,7 @@ function Login() {
     //login function 
     const handleLogin = async (e) => {
         e.preventDefault();
-        let { data } = await axios.post('http://localhost:3003/api/v1/auth/signin', user);
+        let { data } = await axios.post('http://localhost:3000/api/v1/auth/signin', user);
 
         if (data.message === 'login') {
             //route to home 

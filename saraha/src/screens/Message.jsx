@@ -45,7 +45,7 @@ const Message = () => {
               <div className="container w-50 m-auto">
                 <form onSubmit={form}>
                   <textarea
-                    className="form-control"
+                    className={`form-control texterae`}
                     name="text"
                     id="textmsg"
                     cols="10"
@@ -54,8 +54,8 @@ const Message = () => {
                     onChange={getMessage}
                     required
                   ></textarea>
-                  <button type="submit" className="btn btn-outline-info mt-3">
-                    <i class="far fa-paper-plane"></i> Send
+                  <button type="submit" className={`btn btn-outline-info mt-3`}>
+                    <i class="far fa-paper-plane"></i> send
                   </button>
                 </form>
               </div>

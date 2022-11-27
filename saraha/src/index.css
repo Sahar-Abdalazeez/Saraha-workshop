@@ -51,3 +51,12 @@ body {
 .share {
   margin: 0px auto 10px auto;
 }
+.btn-outline-info{
+  color: #10bbb3;
+}
+.btn-outline-info:hover{
+  color: white;
+}
+.texterae{
+  border-color: #10bbb3;
+}
