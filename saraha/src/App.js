@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import NotFound from "./screens/NotFound";
 import AllUsers from "./screens/AllUsers";
 import Message from "./screens/Message";
+import RecievedMessages from "./screens/RecievedMessages";
 import { Route, Routes } from "react-router-dom";
 import User from "./screens/User";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/user" element={<User />}></Route>
         <Route path="/users" element={<AllUsers />}></Route>
+        <Route path="/recievedMessages" element={<RecievedMessages />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
