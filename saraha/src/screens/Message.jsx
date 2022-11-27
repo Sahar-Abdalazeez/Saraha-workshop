@@ -14,6 +14,9 @@ const Message = () => {
        //console.log(data);
        if(data.message == "Dnoe "){
         display();
+        setTimeout(() => {
+          document.getElementById('mes').classList.replace('d-block','d-none');
+        }, 3000);
        }
     }
     let getMessage = (e)=>{
