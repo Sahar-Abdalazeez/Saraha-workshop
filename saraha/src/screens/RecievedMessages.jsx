@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
+import { Link } from "react-router-dom";
 import noMessage from "../assets/animations/noMessage.json";
 import loginFirst from "../assets/animations/loginFirst.json";
 
@@ -103,10 +104,17 @@ function RecievedMessages() {
                     )}
                 </>
             ) : (
-                <>
+                <div style={styles.shouldLogin}>
                     <div style={styles.title}>Login, to see the incoming messages</div>
-                    <Lottie animationData={loginFirst} loop={true} />
-                </>
+                    <Link
+                        to="/login"
+                        data-toggle="modal"
+                        data-target="#share"
+                        className="btn btn-default-outline share my-5"
+                    >
+                        <i className="fas fa-share-alt" /> Login
+                    </Link>
+                </div>
             )}
         </div>
     );
@@ -160,6 +168,10 @@ const styles = {
         marginLeft: "auto",
         backgroundColor: "transparent",
         border: "none",
+    },
+    shouldLogin: {
+        display: "flex",
+        flexDirection: 'column'
     },
 };
 export default RecievedMessages;

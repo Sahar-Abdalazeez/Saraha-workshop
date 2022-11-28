@@ -48,10 +48,10 @@ const Message = () => {
           <div className="container text-center mb-5 text-center">
             <div className="row">
               <div className="col-md-12">
-                <div className="container w-50 m-auto">
-                  <form onSubmit={form}>
+                <div style={{ display: 'flex', alignSelf: 'center', alignItems: 'center', justifyContent: 'center' }}>
+                  <form onSubmit={form} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '60%', flexDirection: 'column', }}>
                     <textarea
-                      className={`form-control texterae`}
+                      style={{ padding: '2%' }}
                       name="text"
                       id="textmsg"
                       cols="10"

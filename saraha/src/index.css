@@ -1,11 +1,21 @@
 body {
   background-color: #f5f8fa;
 }
-
+textarea {
+  outline: none;
+  width: 80%;
+  display: block;
+  display: flex;
+  align-self: center;
+  border: thin solid #10bbb3;
+}
+textarea:focus {
+  border: medium solid #10bbb3;
+}
 .bg-custom {
   background-color: #10bbb3 !important;
 }
-.main{
+.main {
   background-color: red;
 }
 .nav-link {
@@ -51,12 +61,12 @@ body {
 .share {
   margin: 0px auto 10px auto;
 }
-.btn-outline-info{
+.btn-outline-info {
   color: #10bbb3;
 }
-.btn-outline-info:hover{
+.btn-outline-info:hover {
   color: white;
 }
-.texterae{
+.texterae {
   border-color: #10bbb3;
 }
