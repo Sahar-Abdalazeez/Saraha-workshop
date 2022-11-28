@@ -1,13 +1,17 @@
 import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+//img
 import avatar from "../assets/images/avatar.png";
-const Message = () => {
-  const { state } = useLocation();
 
+const Message = () => {
+  //to get the passed params with navigation
+  const { state } = useLocation();
   const { _id, name } = state;
+  //message to send
   let [text, setText] = useState("");
-  let form = async (e) => {
+  //send function
+  let send = async (e) => {
     e.preventDefault();
     let { data } = await axios.post(
       `http://localhost:3000/api/v1/message/${_id}`,
@@ -17,15 +21,16 @@ const Message = () => {
       display();
       setTimeout(() => {
         document.getElementById("mes").classList.replace("d-block", "d-none");
-      }, 3000);
+      }, 2000);
     }
   };
+
   let getMessage = (e) => {
     let myMessage = { ...text };
     myMessage[e.target.name] = e.target.value;
     setText(myMessage);
-    //console.log(text);
   };
+  //display alert message sending success
   function display() {
     let mes = document.getElementById("mes");
     mes.classList.replace("d-none", "d-block");
@@ -48,10 +53,26 @@ const Message = () => {
           <div className="container text-center mb-5 text-center">
             <div className="row">
               <div className="col-md-12">
-                <div style={{ display: 'flex', alignSelf: 'center', alignItems: 'center', justifyContent: 'center' }}>
-                  <form onSubmit={form} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '60%', flexDirection: 'column', }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignSelf: "center",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <form
+                    onSubmit={send}
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "60%",
+                      flexDirection: "column",
+                    }}
+                  >
                     <textarea
-                      style={{ padding: '2%' }}
+                      style={{ padding: "2%" }}
                       name="text"
                       id="textmsg"
                       cols="10"

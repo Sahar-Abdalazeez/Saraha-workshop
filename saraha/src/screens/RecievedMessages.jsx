@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import { Link } from "react-router-dom";
-import noMessage from "../assets/animations/noMessage.json";
-import loginFirst from "../assets/animations/loginFirst.json";
-
+import Lottie from "lottie-react";
+//icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons/faTrash";
-import Lottie from "lottie-react";
+//lottie
+import noMessage from "../assets/animations/noMessage.json";
+
 
 function RecievedMessages() {
     let [messages, setMessages] = useState([]);
@@ -24,7 +25,6 @@ function RecievedMessages() {
                 })
                 .then((res) => {
                     setMessages(res.data.messageList);
-                    // console.log('res', res)
                 })
                 .catch((error) => {
                     console.error(error);
@@ -51,7 +51,10 @@ function RecievedMessages() {
                     authorization: `tariq__${userToken}`,
                 },
             })
-            .then((res) => console.log("delete result", res));
+            .then((res) => console.log("delete result", res))
+            .catch((error) => {
+                console.error(error);
+            });
     };
 
     return (
@@ -78,7 +81,6 @@ function RecievedMessages() {
                                             onClick={() => deleteMessage(item._id)}
                                             style={styles.icon}
                                         >
-                                            {" "}
                                             <FontAwesomeIcon
                                                 size="x"
                                                 icon={faTrash}
@@ -91,14 +93,7 @@ function RecievedMessages() {
                             );
                         })
                     ) : (
-                        <div
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                alignSelf: "center",
-                            }}
-                        >
+                        <div style={styles.noMessageFound}>
                             <Lottie animationData={noMessage} loop={true} />
                         </div>
                     )}
@@ -136,7 +131,6 @@ const styles = {
         color: "gray",
         alignItems: "center",
         justifyContent: "center",
-        // margin: 'auto'
     },
     mainContainer: {
         disply: "flex",
@@ -171,7 +165,13 @@ const styles = {
     },
     shouldLogin: {
         display: "flex",
-        flexDirection: 'column'
+        flexDirection: "column",
+    },
+    noMessageFound: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "center",
     },
 };
 export default RecievedMessages;
