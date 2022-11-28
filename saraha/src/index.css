@@ -66,6 +66,7 @@ textarea:focus {
 }
 .btn-outline-info:hover {
   color: white;
+  background-color: #10bbb3;
 }
 .texterae {
   border-color: #10bbb3;
