@@ -71,3 +71,10 @@ textarea:focus {
 .texterae {
   border-color: #10bbb3;
 }
+.alertColor{
+  color: #0f5132;
+  cursor: pointer;
+}
+.alertColor:hover{
+  color: #0f5132;
+}

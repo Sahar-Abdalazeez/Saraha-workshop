@@ -15,6 +15,7 @@ function Register() {
     let preventForm = async (e) => {
         e.preventDefault();
         let { data } = await axios.post("http://localhost:3000/api/v1/auth/signup", user);
+        console.log(data.message);
         if (data.message === 'done') {
             console.log('data', data);
             navigate('/user');
@@ -39,9 +40,11 @@ function Register() {
                     <input className="form-control my-2 " onChange={getFormdata} placeholder="Enter your email" type="email" name="email" required />
                     <input className="form-control  " onChange={getFormdata} placeholder="Enter your Password" type="password" name="password" required />
                     <input className="form-control  my-2" onChange={getFormdata} placeholder="Password Confirmation" type="password" name="cpassword" required />
-                    <button type="submit" className="btn btn-default-outline my-4 w-100 rounded">Register</button>
+                    <button type="submit" className="btn btn-default-outline my-2 w-100 rounded">Register</button>
                 </form>
+                
             </div>
+            
         </div>
 
 
